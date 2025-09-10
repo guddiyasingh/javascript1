@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a program to load a javaScript file in a browser using promises. Uae .then()
+    to display on alert when the load is complete -->
+    <script>
+    
+    // function loadScript(src) {
+    //     return new Promise((resolve,reject)=>{
+    //         const script = document.createElement("script");
+    //         script.src = src;
+    //         script.onload = () =>resolve(src);
+    //         script.onerror = () =>reject(new Error ('Failed to load script: ${src}'));
+    //         document.head.appendChild(script);
+    //     })
+    // }
+
+   // call the function and handle with  .then()
+//    loadScript('example.js') //Replace with your js file
+   
+//    .then(() =>{
+//     alert('Script loaded successfully!');
+//    })
+//    .catch(error =>{
+//     console.error(error);
+//     alert('Failed to load script.');
+//    })
+// another examplle
+
+// let promise = new Promise(function(resolve, reject){
+//     let success = true;
+
+//     setTimeout(() =>{
+
+//         if(success){
+//             resolve("It worked!");
+//         }
+//         else {
+//             reject("It failed")
+//         }
+//     },1000); // 1  second delay
+// })
+//Handle the result
+
+// promise 
+// .then(result => {
+//     console.log(result);//"It worked!"
+// })
+
+// .catch(error =>{
+//     console.log(error);//If it fails
+// })
+
+//Write the some program from previous question and use async await syntax
+
+// async function getData() {
+
+//     try{
+
+//         const response = await fetch("https://api.example.com/data");
+//         const data = await response.json();
+//         console.log(data);
+
+//     }catch(err) {
+//         console.error("Error fetching data:",err);
+//     }
+// }
+
+//Create a promise which rejects after 3 seconds use an async / await
+//  to get its value use a try catch to handle its error
+
+// Create a Promies that rejects aftr 3 seconds
+
+
+
+function  rejectAfter3Seconds(){
+ return  new Promise((_,reject)=>{
+    setTimeout(() =>{
+        reject("Promise rejected after 3 seconds")
+    }, 3000);
+});
+}
+
+// Async function to use await and handle error
+
+async function handlePromise(){
+    try{
+        const result = await rejectAfter3Seconds();
+        console.log("Result:",result);
+    }
+    
+catch(error){
+    console.error("Caought Error:",error)
+}
+}
+    let c = handlePromise()
+    console.log(c)
+  //Write a program using promise.all () inside or async/await to 3 promisees compars
+//   its results with the case where we await these promise are by one  
+    </script>
+    
+</body>
+</html>

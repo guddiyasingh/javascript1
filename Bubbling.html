@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <style>
+    .child{
+
+        background-color: aliceblue;
+        border: 2px solid black;
+        padding: ;
+    }
+
+    .childContainer{
+
+        /* background-color: aqua;/ */
+        padding: 14px;
+        margin: 14;
+    }
+
+    .container{
+
+        background-color: rgb(10, 90, 63);
+        padding: 14px;
+        margin: 14px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I am a child
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", (e)=>{
+            e.stopPropagation()
+            alert("child Was clicked")
+        })
+       
+        document.querySelector(".childContainer").addEventListener("click", (e)=>{
+            e.stopPropagation()
+            alert("ChildContainer Was clicked")
+        })
+
+        document.querySelector(".container").addEventListener("click", (e)=>{
+            // e.stopPropagation()
+            alert("container Was clicked")
+        })
+      
+        function getRandomeColor(){
+
+            let val1=  Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1},${val2},${val3})`
+        }
+
+
+    // let a =    setInterval(()=>{
+    //     document.querySelector(".childContainer").style.background = getRandomeColor()
+    //    }, 3000);
+    //     console.log(a)
+
+        let a =    setTimeout(()=>{
+        document.querySelector(".childContainer").style.background = getRandomeColor()
+       }, 3000);
+        console.log(a)
+ 
+    </script>
+
+    </script>
+</body>
+</html>

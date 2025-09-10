@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+
+<style>
+    .container{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        padding: 5px;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        width: 56px;
+        border: 2px solid black;
+        margin: 5px;
+        padding: 5px;
+       
+    }
+</style>
+
+<body>
+   <div class="container">
+   
+    <div class="box">
+        This is box
+    </div>
+    <div class="box">Box2</div>
+    <div class="box">Box3</div>
+    <div class="box">Box4</div>
+    <div class="box">Box5</div>
+   </div> 
+   <!-- <script src="randomeColor.js"></script> -->
+    <script>
+//         let boxes = document.querySelector(".container").children
+
+
+// function getRandomColor(){
+
+//     let val1 = Math.ceil(0 + Math.random()* 255);
+//     let val2 = Math.ceil(0 + Math.random()* 255);
+//     let val3 = Math.ceil(0 + Math.random()* 255);
+
+//     return `rgb(${val1},${val2},${val3})`
+// }
+
+// Array.from(boxes).forEach(e=>{
+//     e.style.backgroundColor = getRandomColor()
+// })
+
+var boxes = document.querySelectorAll(".box");
+
+for (var i = 0; i<boxes.lenght; i++){
+    var box = boxes[i];
+
+//Generate random color(16777215 is White in Decimal)
+
+var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+//Generate random background color
+var randomBackgroundColor = "#" + Math.floor(Math.random()*16777215).toString
+(16);
+
+// Assign random color and background
+box.style.color =randomColor;
+box.style.randomBackgroundColor = randomBackgroundColor;
+
+//set content to show color code
+
+box.textContent= randomColor;
+}
+    </script>
+
+</body>
+<!-- <script src="script.js"></script> -->
+<!-- <script src="new.js"></script> -->
+<!-- <script src="Conditiona.js"></script> -->
+<!-- <script src="DomBom.js"></script> -->
+ <!-- <script src="DOM.js"></script> -->
+ <!-- <script src="selecting.js"></script> -->
+  <!-- <script src="javaScript.js"></script> -->
+   <!-- <script src="randomeColor.js"></script> -->
+
+
+</html>

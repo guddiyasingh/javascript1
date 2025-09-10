@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let obj = {
+    //     a:1,
+    //     b: "Harry"
+    // }  
+    // console.log(obj)
+
+    // let animal = {
+    //     eats: true
+    // }
+    // let rabbit = {
+    //     jump: true
+    // }  
+
+    // rabbit._proto_ = animal ;//sets  rabbit.[[Prototype]] = animal
+
+  class Animal {
+
+    constructor (name) {
+        this.name = name
+        console.log ("object is created ...")
+
+    }
+   eats(){
+
+    console.log("kha rha hoon")
+   } 
+   jumps(){
+    console.log("kud rha hoon")
+   }
+  }  
+  class Lion extends Animal{
+   constructor(name){
+    super(name)
+    this.name = "shera"
+   console.log("Object is created nad he is a lion....")
+   }
+
+   jumps(){
+    console.log("kood rha hoon")
+   }
+  }
+  let b = new Lion("shera");
+  console.log(b)
+  
+  let a = new Animal('bunny');
+  cosole.log(a)
+
+  
+
+    </script>
+</body>
+</html>
