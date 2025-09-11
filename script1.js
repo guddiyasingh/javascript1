@@ -37,4 +37,11 @@ console.log(car.myCar); //Saturn
 console.log(car.getCar);//Honda
 console.log(car.special);//Toyota
 
-var myName = "guddiya"
+var myName = "guddiya";
+
+if(myName) {
+    console.log("this is truthy value");
+}
+else {
+    console.log("this is falsy value")
+}
