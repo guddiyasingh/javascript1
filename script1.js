@@ -45,3 +45,22 @@ if(myName) {
 else {
     console.log("this is falsy value")
 }
+
+
+if (Math.random() > 0.5) {
+    const y =5;
+}
+console.log(y)
+
+
+// Let check the temperature
+
+
+var temperature = 25;
+ if (temperature > 30) {
+
+    console.log("Lets go to beach");
+ }
+ else {
+    console.log("tv dekhte hai yar")
+ }
