@@ -62,5 +62,32 @@ var temperature = 25;
     console.log("Lets go to beach");
  }
  else {
-    console.log("tv dekhte hai yar")
+    console.log("tv dekhte ha");
  }
+
+ // EXTERA COMMAS IN ARRAY LITERALS
+
+ const fish = ["Lion", , "Angle"];
+
+ console.log(fish.length); //3
+ console.log(fish[1]); //undefined
+ console.log(fish)
+
+
+
+ let arr = [1, 2,3,4,5,6];
+
+ arr[0] =56666;
+ console.log(arr, typeof arr);
+ console.log(arr.length);
+
+//  console.log(arr[0]);
+//  console.log(arr[2]);
+//  console.log(arr[5]);
+
+ console.log(arr.toString())
+ console.log(arr.join(" and "));
+
+ const a = [1,2,3,4,5];
+ a.pop()
+ console.log(a)
