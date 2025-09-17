@@ -89,7 +89,19 @@ var temperature = 25;
  console.log(arr.join(" and "));
 
  const a = [1,2,3,4,5];
- a.pop()
+ a.push("100")
  console.log(a)
 
- console.log(a.push(100))
+//  console.log(a.push(100))
+
+let a1 =[1,2,3,4,];
+let a2=[5,6,7,8];
+ let a3 =[9,8,7]
+
+let a4= a3.concat(a1,a2);
+console.log(a4);
+
+let numbers = [1,2,3,4,5,6,7];
+
+numbers.splice(2);
+console.log(numbers);
