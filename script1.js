@@ -103,5 +103,16 @@ console.log(a4);
 
 let numbers = [1,2,3,4,5,6,7];
 
-numbers.splice(2);
-console.log(numbers);
+// numbers.splice(2);
+// console.log(numbers);
+
+// numbers.shift()
+// console.log(numbers)
+
+numbers.unshift(2)
+console.log(numbers)
+
+let a5 = [3,6,1,2,7,4];
+a5.sort();
+console.log(a5);
+
