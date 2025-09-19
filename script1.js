@@ -116,3 +116,75 @@ let a5 = [3,6,1,2,7,4];
 a5.sort();
 console.log(a5);
 
+a5.reverse();
+console.log(a5)
+let a6 = [1, 2,3,4,5,6,7];
+
+for (let i of a6) {
+    const element =i*2
+    console.log(element);
+};
+
+a6.forEach((value, index, arr)=>{
+    console.log(value, index, arr)
+});
+
+
+// numbers.splice(1,2);
+numbers.splice(1,3);
+// numbers.splice(1,0);
+console.log(numbers)
+
+
+let obj = {
+    a:1,
+    b:2,
+    c:3
+}
+
+for (const key in obj) {
+
+    if(Object.hasOwnProperty.call(obj,key)) {
+        const element = obj[key];
+        console.log(key,element);
+    }
+
+}
+
+for(const value of a) {
+    console.log(value)
+}
+
+let arr1 = [1,12,13,14,15,16];
+
+// let newArr =[]
+
+// for (let i=0; i<arr.length; i++) {
+//     const element = arr[i];
+//     newArr.push(element**2)
+// }
+
+ let newArr = arr.map((e,index,array)=>{
+    return e**2
+ })
+console.log(newArr);
+
+
+const greaterThanSeven = (e) =>{
+    if(e>7) {
+        return true
+    }
+    return false
+}
+
+console.log(arr1.filter(greaterThanSeven))
+
+let arr2 = [1,2,3,4,5]
+
+const red = (a,b) => {
+    // return a+b
+    return a*b
+}
+
+console.log(arr2.reduce(red))
+
