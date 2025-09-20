@@ -188,3 +188,51 @@ const red = (a,b) => {
 
 console.log(arr2.reduce(red))
 
+ let rand = Math.random();
+    let first, second, third;
+    // 0 0.33 0.66 1
+    if(rand<0.33){
+        first = "Crazy";
+    }
+    else if(rand<0.66 && rand>=0.33){
+     first = "Amazing";   
+    }
+    else{
+        first ="Fire"
+    }
+    // Lets generate the second word
+
+    if( rand>=0.33){
+        second = "Crazy"
+    }
+    else if(rand<0.66 && rand>=0.33){
+         second = "Foods"
+    }
+    else{
+        second = "Fire"
+    }
+   
+      // Lets generate the third word
+
+    if( rand>=0.33){
+        third= "Bros"
+    }
+    else if(rand<0.66 && rand>=0.33){
+         third = "Limited"
+    }
+    else{
+        third = "Hub"
+    }
+
+    console.log(`${first} ${second} ${third}`)
+
+    // write a programe  to calculate the sum of first n natural number using reduce and using 
+    // for loops 
+
+    let arr3= [1,2,3,4,5,6];
+
+    const red1 = (a,b) => {
+       return a*b
+    }
+
+    console.log(arr3.reduce(red1));

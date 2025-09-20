@@ -20,8 +20,8 @@
     Another Word:
     Bros
     Limited
-    Hub
-</body> -->
+    Hub -->
+</body>
 <script>
 
     let rand = Math.random();
@@ -37,17 +37,29 @@
         first ="Fire"
     }
     // Lets generate the second word
-
+    
+    rand = Math.random();
     if( rand>=0.33){
         second = "Crazy"
     }
     else if(rand<0.66 && rand>=0.33){
-         scond = "Amazing"
+         scond = "Foods"
     }
     else{
         second = "Fire"
     }
-
-    
+   
+      // Lets generate the third word
+    rand = Math.random();
+    if( rand>=0.33){
+        first= "Bros"
+    }
+    else if(rand<0.66 && rand>=0.33){
+         first = "Limited"
+    }
+    else{
+        first = "Hub"
+    }
+      console.log(`${first} ${second} ${third}`)
 </script>
 </html>
