@@ -188,6 +188,24 @@ const red = (a,b) => {
 
 console.log(arr2.reduce(red))
 
+//   <!--create a business name generator by combining list of adjective  -->
+//     <!-- Adjectives:
+//     crazy
+//     Amazing
+//     fire
+
+//     Shop Name:
+//     Engine
+//     Foods
+//     Garments
+
+//     Another Word:
+//     Bros
+//     Limited
+//     Hub -->
+
+
+
  let rand = Math.random();
     let first, second, third;
     // 0 0.33 0.66 1
