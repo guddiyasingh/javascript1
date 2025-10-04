@@ -254,3 +254,13 @@ console.log(arr2.reduce(red))
     }
 
     console.log(arr3.reduce(red1));
+
+    //genrate a random  box color and their background color
+
+    function getRandomColor() {
+
+        const r = Math.floor(Math.random() * 256); // 0-255
+        const g = Math.floor(Math.random() *256);//0-255
+        const b =Math.floor(Math.random() *256);//0-255
+
+        return `rgb(${r},${g},${b}`;} 
