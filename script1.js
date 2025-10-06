@@ -258,19 +258,28 @@
     //genrate a random  box color and their background color
 
 
-    let boxes = document.querySelector(".container").children;
+//     let boxes = document.querySelector(".container").children;
 
-    function getRandomColor() {
+//     function getRandomColor() {
 
-        const r = Math.floor(Math.random() * 256); // 0-255
-        const g = Math.floor(Math.random() *256);//0-255
-        const b =Math.floor(Math.random() *256);//0-255
+//         const r = Math.floor(Math.random() * 256); // 0-255
+//         const g = Math.floor(Math.random() *256);//0-255
+//         const b =Math.floor(Math.random() *256);//0-255
 
-        return `rgb(${r},${g},${b}`; 
-    } 
+//         return `rgb(${r},${g},${b}`; 
+//     } 
 
 
-   Array.from(boxes).forEach(e=>{
-    e.style.backgroundColor = getRandomColor();
-    e.style.color = getRandomColor();
-   })
+//    Array.from(boxes).forEach(e=>{  
+//     e.style.backgroundColor = getRandomColor();
+//     e.style.color = getRandomColor();
+//    })
+
+// let div = document.createElement("div");
+// div.innerHTML = "I am a new div"
+// div.setAttribute("class", "created");
+// document.querySelector(".container").after(div)
+
+let cont = document.querySelector(".container");
+cont.insertAdjacentElement("beforebegin", 
+  "<b>I am under the water  please help me here too much raining...</b>")
