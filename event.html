@@ -10,11 +10,50 @@
         <div class="box">Hey I am a box</div>
         <button id="btn">Change Content</button>
         <script>
-          let button = document.getElementById("btn");
-          button.addEventListener("dblclick", function(){
-            // alert("you clicked me")
-            document.querySelector(".box").innerHTML= "<b>yayy you were clicked</b>"
-          })  
+          // let button = document.getElementById("btn");
+          // button.addEventListener("dblclick", function(){
+          //   // alert("you clicked me")
+          //   document.querySelector(".box").innerHTML= "<b>yayy you were clicked</b> Enjoy yor click!"
+          // })  
+          // button.addEventListener("contextmenu",()=>{
+          //   alert("Don't hack us by Right click please")
+          // })
+               
+          // function greet(name, callback){
+          //   console.log("Hello" + name)
+            // callback();
+          // }
+
+          // function sayBye(){
+          //   console.log("Bye!");
+          // }
+
+          // greet("Alice, sayBye");
+
+          // console.log("I am inside settimeout 2")
+
+          setTimeout(() => {
+            console.log("I am inside settimeout 1")
+          },0);
+
+          setTimeout (() => {
+            console.log("I am inside settiomout 2")
+          },0);
+              const fn = () => {
+                console.log("Nothing")
+              }
+          const callback = (arg, fn) => {
+            console.log(arg)
+            fn();
+          }
+
+          const loadScript = (src, callback) =>{
+            let sc= document.createElement("script");
+            sc.src = src;
+            sc.onload = () =>("Harry",fn);
+            document.body.append(sc)
+          }
+          loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js", callback);
         </script>
     </div>
 </body>
