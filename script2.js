@@ -23,6 +23,15 @@ function createCard(title, cName, views, monthsOld, duration, thumbnail){
       
 
 document.querySelector(".container").innerHTML =  document.querySelector(".container").innerHTML + html
+
+document.getElementById("addCardBtn").addEventListener("click", function(){
+   createCard("Introduction to Express.js",
+      "CodeWithHarry",
+      56000,2,"31:22",
+       "https://i.ytimg.com/vi/mCx5aSEK8YE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs= AOn4CLD0nnsOR8c-HQ0AYnnFDHnrACrK0A"
+
+   )
+})
 }
 
 
