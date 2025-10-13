@@ -1,8 +1,8 @@
 function createCard(title, cName, views, monthsOld, duration, thumbnail){
     //Finish this function
      let viewStr 
-     if(views<1000000){
-        viewStr = views/1000 + "k";
+     if(views<1000){
+        viewStr = views;
      }
      else if(views>1000000){
         viewStr = views/1000000 + "M";
@@ -27,7 +27,8 @@ document.querySelector(".container").innerHTML =  document.querySelector(".conta
 
 
 createCard("Introduction to Backed | sigma Web Dev video #2 ", "CodeWithHarry",
-   560000,7,"31:22","https://i.ytimg.com/vi/mCx5aSEK8YE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD0nnsOR8c-HQ0AYnnFDHnrACrK0A")
+   560000,7,"31:22",
+"https://i.ytimg.com/vi/mCx5aSEK8YE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD0nnsOR8c-HQ0AYnnFDHnrACrK0A")
 
 
 
