@@ -31,7 +31,7 @@
     }
    }
 
-   class Lion extends Annimal {
+   class Lion extends Animal {
     constructor (name){
         super(name);
         console.log("Object is created and he is a lion....")
@@ -45,6 +45,31 @@
    }
    let a = new Animal("Dog");
    console.log(a);
+
+   let i = new Lion("shera");
+   console.log(i);
+
+
+   class User {
+     constructor(name) {
+        // invokes the setter
+        this.name = name;
+     }
+     get name() {
+        return this._name;
+     }
+     set name(value) {
+        if(value.lenght < 4){
+            alert("Name is too short.");
+            return;
+        }
+        this._name = value;
+     }
+   }
+
+   let user = new User("jhon");
+   alert(user.name);// jhon
+   user = new User(""); // Name is too short
   </script>  
 </body>
 </html>
