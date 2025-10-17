@@ -56,7 +56,33 @@ loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js",
         })
 })
  })
-    
+    const datas = [
+
+    {name: "Ajay", profession: "Devloper"},
+    {name: "Vijay", profession: "Tester"},
+    {name: "Sanjay", profession: "Manager"},
+]
+
+
+function getDatas(){
+    setTimeout(() => {
+        let output="";
+        datas.forEach((data)=>{
+            output += `<li>${data.name} - ${data.profession}</li>`;
+        });
+        document.body.innerHTML= output;
+    },1000);
+}
+
+function createdata(newdata,callback){
+    setTimeout(() => {
+        datas.push(newdata);
+        callback();
+    },2000);
+}
+
+  createdata({name: "Ravi", profession: "software Engineer"},getDatas);
+// getDatas();
 
 // place your snippets for javascript here. Each sr
 
