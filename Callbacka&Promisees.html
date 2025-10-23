@@ -7,27 +7,27 @@
 </head>
 <body>
     <script>
-console.log("Rohan is a hecker")
-console.log("Harry is a hacker")
+// console.log("Rohan is a hecker")
+// console.log("Harry is a hacker")
 
-setTimeout(()=>{
-    console.log("I am inside settimeout")
-},0)
+// setTimeout(()=>{
+//     console.log("I am inside settimeout")
+// },0)
 
-setTimeout(()=>{
-    console.log("I am inside settimeout 2")
-},0);
+// setTimeout(()=>{
+//     console.log("I am inside settimeout 2")
+// },0);
 
-console.log("THe end")
+// console.log("THe end")
 
-const fn = () =>{
-    console.log("Nothing")
-}
+// const fn = () =>{
+//     console.log("Nothing")
+// }
 
-const callback = (arg,fn) =>{
-    console.log(arg)
-    fn()
-}
+// const callback = (arg,fn) =>{
+//     console.log(arg)
+//     fn()
+// }
 
 // const loadScript = (src,callback) =>{
 
@@ -38,53 +38,93 @@ const callback = (arg,fn) =>{
 // }
 
 
-const loadScript = (src,callback) => {
+// const loadScript = (src,callback) => {
 
-    let sc = document.createElement("script");
-    sc.src = src;
-    sc.onload = callback("Harry");
-    document.head.append(sc)
-}
+//     let sc = document.createElement("script");
+//     sc.src = src;
+//     sc.onload = callback("Harry");
+//     document.head.append(sc)
+// }
 
-loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", (arg, fn) => {
-    console.log(arg)
+// loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", (arg, fn) => {
+//     console.log(arg)
     
-    console.log(arg)
-    fn("firstarg", ()=>{
-        ddg("secondarg", () =>{
+//     console.log(arg)
+//     fn("firstarg", ()=>{
+//         ddg("secondarg", () =>{
             
-        })
-})
- })
-    const datas = [
+//         })
+// })
+//  })
+//     const datas = [
 
-    {name: "Ajay", profession: "Devloper"},
-    {name: "Vijay", profession: "Tester"},
-    {name: "Sanjay", profession: "Manager"},
-]
+//     {name: "Ajay", profession: "Devloper"},
+//     {name: "Vijay", profession: "Tester"},
+//     {name: "Sanjay", profession: "Manager"},
+// ]
 
 
-function getDatas(){
-    setTimeout(() => {
-        let output="";
-        datas.forEach((data)=>{
-            output += `<li>${data.name} - ${data.profession}</li>`;
-        });
-        document.body.innerHTML= output;
-    },1000);
-}
+// function getDatas(){
+//     setTimeout(() => {
+//         let output="";
+//         datas.forEach((data)=>{
+//             output += `<li>${data.name} - ${data.profession}</li>`;
+//         });
+//         document.body.innerHTML= output;
+//     },1000);
+// }
 
-function createdata(newdata,callback){
-    setTimeout(() => {
-        datas.push(newdata);
-        callback();
-    },2000);
-}
+// function createdata(newdata,callback){
+//     setTimeout(() => {
+//         datas.push(newdata);
+//         callback();
+//     },2000);
+// }
 
-  createdata({name: "Ravi", profession: "software Engineer"},getDatas);
+//   createdata({name: "Ravi", profession: "software Engineer"},getDatas);
 // getDatas();
 
 // place your snippets for javascript here. Each sr
+
+// function walkDog(callback){
+//     setTimeout(()=>{
+//         console.log("you walked the dog ");
+//         callback();
+//     },1500)
+// }
+
+// function cleanKitchen(callback){
+//     setTimeout(() =>{
+//         console.log("you cleande the kitchen");
+//         callback();
+//     },2500)
+// }
+
+// function takeOutTrash(callback){
+//     setTimeout(() =>{
+//         console.log("you took out the trash");
+//         Callback();
+//     },500)
+// }
+
+// walkDog(() =>{
+//     cleanKitchen(()=>{
+//         takeOutTrash(() =>{
+//             console.log("you finished all the chores ")
+//         })
+//     })
+// })
+
+function walkDog(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("you walked the dog");
+        },1500);
+    });
+    setTimeout(()=>{
+
+    })
+}
 
 
 
