@@ -8,6 +8,15 @@
 <body>
     <button>Add note</button>
     <div class="note"></div>
+
+      <!-- Password validator UI -->
+    <div style="margin-top:1rem;">
+        <input id="pwInput" type="password" placeholder="Enter password">
+        <button id="togglePw" type="button" aria-pressed="false">Show</button>
+        <button id="validateBtn">Validate password</button>
+        <div id="pwResult" aria-live="polite" style="margin-top:.5rem"></div>
+    </div>
+    
     <script>
      
     // function saveNoteToLocalStorage(note){
@@ -86,6 +95,51 @@
     }
 
     console.log(validatePassword("Password123")); // true
+
+
+    // Add this: wire UI to the function
+    document.getElementById('validateBtn').addEventListener('click', () => {
+        const pw = document.getElementById('pwInput').value;
+        const ok = validatePassword(pw);
+        const resultEl = document.getElementById('pwResult');
+        if (ok) {
+            resultEl.textContent = 'Password is valid';
+            resultEl.style.color = 'green';
+        } else {
+            resultEl.textContent = 'Invalid: require 8+ chars, upper & lower case, and at least one digit';
+            resultEl.style.color = 'red';
+        }
+    });
+
+    // Optional: live feedback as user types
+    document.getElementById('pwInput').addEventListener('input', () => {
+        document.getElementById('validateBtn').click();
+    });
+
+     // Add show/hide toggle for the password input
+    const pwInput = document.getElementById('pwInput');
+    const toggleBtn = document.getElementById('togglePw');
+
+    toggleBtn.addEventListener('click', () => {
+        const isPassword = pwInput.type === 'password';
+        pwInput.type = isPassword ? 'text' : 'password';
+        toggleBtn.textContent = isPassword ? 'Hide' : 'Show';
+        toggleBtn.setAttribute('aria-pressed', String(!isPassword));
+    });
+
+    // ...existing code...
+    // document.getElementById('validateBtn').addEventListener('click', () => {
+    //     const pw = document.getElementById('pwInput').value;
+    //     const ok = validatePassword(pw);
+    //     const resultEl = document.getElementById('pwResult');
+    //     if (ok) {
+    //         resultEl.textContent = 'Password is valid';
+    //         resultEl.style.color = 'green';
+    //     } else {
+    //         resultEl.textContent = 'Invalid: require 8+ chars, upper & lower case, and at least one digit';
+    //         resultEl.style.color = 'red';
+    //     }
+    // });
     </script>
 </body>
 </html>
