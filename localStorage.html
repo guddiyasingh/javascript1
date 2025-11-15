@@ -64,9 +64,28 @@
 
     function mirrorString(str){
         let reversed = str.split('').reverse().join('');
+        // let reversed = str.reverse();
         return str + reversed;
     }
-    console.log(mirrorString("hello"))
+    console.log(mirrorString("hello"));
+
+    // 4. The password validator: you are building a password validation feature. Create a function that
+    // function that checks if a given password meets the following criteria: at least 8 characters long, containes
+    // both uppercase and lowercase letters and include at least  one digit.
+    function validatePassword(password){
+        const minLength = 8;
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasDigit = /\d/.test(password);
+
+        if(password.length >= minLength && hasUpperCase && hasLowerCase && hasDigit){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    
     </script>
 </body>
 </html>
