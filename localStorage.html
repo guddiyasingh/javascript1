@@ -10,28 +10,28 @@
     <div class="note"></div>
     <script>
      
-    function saveNoteToLocalStorage(note){
-        localStorage.setItem("note",note)
-    }
+    // function saveNoteToLocalStorage(note){
+    //     localStorage.setItem("note",note)
+    // }
 
     //  if(localStorage.getItem("name")){
     //     a = localStorage.getItem("name")
     //     document.write("Welcome" + a)
     //  }
 
-    let note = localStorage.getItem("note")
-    if(note){
-        document.querySelector(".note").innerHTML = note
-    }
+    // let note = localStorage.getItem("note")
+    // if(note){
+    //     document.querySelector(".note").innerHTML = note
+    // }
 
-    document.querySelector("button").addEventListener
-    ("click",()=>{
-        let note = prompt("Enter your note")
-        saveNoteToLocalStorage(note)
-          document.querySelector(".note").innerHTML = note
-    }
+    // document.querySelector("button").addEventListener
+    // ("click",()=>{
+    //     let note = prompt("Enter your note")
+    //     saveNoteToLocalStorage(note)
+    //       document.querySelector(".note").innerHTML = note
+    // }
 
-    )
+    // )
     
 
     //  else{
@@ -52,12 +52,21 @@
         result.push(arr[i]); // keep it as-is
       } else {
         result.push(arr[i]*2)
-
-        
       } 
      }   
+     return result;
     }
+    console.log(doubleTrouble([4,4,5,5,6,7,8,9]))
 
+  //  3. The Mirror Mirror : Imagine you have a string, and you need to create a new string that
+  //   is a mirror image of the original. Write a function that appends the reversed version of the original 
+  //   string to itself.
+
+    function mirrorString(str){
+        let reversed = str.split('').reverse().join('');
+        return str + reversed;
+    }
+    console.log(mirrorString("hello"))
     </script>
 </body>
 </html>
