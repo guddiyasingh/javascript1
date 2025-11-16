@@ -41,6 +41,23 @@
   // The Double Trouble: you are tasked with writing a function that doubles each element in array.
      // However, there's catch: if the array contains consecutive duplicate elements, only double one 
      // of them.
+
+    //  5. The Sum Selector: you are working on a function that should sum all numbers in an Array
+    //  until it encounters a negative number. Write a function that performs this summation.
+
+
+    function sumUntilNagtive(arr){
+        let sum =0;
+        for(const v of arr){
+            for(const v of arr){
+                if(typeof v!== 'number')continue;
+                if(v<0) break;
+                sum += v;
+            }
+            return sum;
+        }
+        console.log(sumUntilNagtive([1,2,3,45,-2 ,3,4,5]));
+    }
     </script>
 </body>
 </html>
