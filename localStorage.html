@@ -12,7 +12,12 @@
       <!-- Password validator UI -->
     <div style="margin-top:1rem;">
         <input id="pwInput" type="password" placeholder="Enter password">
-        <button id="togglePw" type="button" aria-pressed="false">Show</button>
+        <button id="togglePw" type="button" aria-pressed="false">
+          <svg id="toggleIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>   
+        </button>
         <button id="validateBtn">Validate password</button>
         <div id="pwResult" aria-live="polite" style="margin-top:.5rem"></div>
     </div>
@@ -115,16 +120,38 @@
     document.getElementById('pwInput').addEventListener('input', () => {
         document.getElementById('validateBtn').click();
     });
+    
+    // SVG path content for eye (show) and eye-off (hide with slash)
+    const eyePaths = `
+        <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+    `;
+    const eyeOffPaths = `
+        <path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a20.85 20.85 0 0 1 5.06-6.06"></path>
+        <path d="M1 1l22 22" stroke="currentColor"></path>
+        <path d="M9.88 9.88A3 3 0 0 0 14 14"></path>
+    `;
+//  toggleBtn.addEventListener('click', () => {
+//         const isPassword = pwInput.type === 'password';
+//         pwInput.type = isPassword ? 'text' : 'password';
+//         toggleBtn.setAttribute('aria-pressed', String(!isPassword));
+//         // swap inner paths of the svg icon
+//         toggleIcon.innerHTML = isPassword ? eyeOffPaths : eyePaths;
+//         toggleBtn.title = isPassword ? 'Hide password' : 'Show password';
+//     });
 
      // Add show/hide toggle for the password input
     const pwInput = document.getElementById('pwInput');
     const toggleBtn = document.getElementById('togglePw');
+    const toggleIcon = document.getElementById('toggleIcon');
 
     toggleBtn.addEventListener('click', () => {
         const isPassword = pwInput.type === 'password';
         pwInput.type = isPassword ? 'text' : 'password';
-        toggleBtn.textContent = isPassword ? 'Hide' : 'Show';
         toggleBtn.setAttribute('aria-pressed', String(!isPassword));
+         // swap inner paths of the svg icon
+        toggleIcon.innerHTML = isPassword ? eyeOffPaths : eyePaths;
+        toggleBtn.title = isPassword ? 'Hide password' : 'Show password';
     });
 
     // ...existing code...
