@@ -17,26 +17,26 @@
   four houses (Gryffindor (lenght less than 6),Hufflepuff(lenght less a than 8),Revenclaw(length less
   than 12 or Slytherin(lenght grater than or equal to 12) based on the lenght of their names.)
   ) */
- let students = ["shubh","anajali","shivani","shivam","Annapurna","shubham","krishnanendu",
-    "Ravindranathm","Shivesh","Kaif","Enanuel"
- ]
-  let houses = []
+//  let students = ["shubh","anajali","shivani","shivam","Annapurna","shubham","krishnanendu",
+//     "Ravindranathm","Shivesh","Kaif","Enanuel"
+//  ]
+//   let houses = []
 
-  for (const student of students){
-    if(student.length <6){
-        houses.append("Gryffindor")
-    }
-    else if(student.length < 8){
-        houses.append("Hufflepuff")
-    }
-    else if(student.length < 12){
-        houses.append("Ravenclaw")
-    }
-    else{
-        houses.append("slytherin")
-    }
-  }
-  console.log(houses)
+//   for (const student of students){
+//     if(student.length <6){
+//         houses.append("Gryffindor")
+//     }
+//     else if(student.length < 8){
+//         houses.append("Hufflepuff")
+//     }
+//     else if(student.length < 12){
+//         houses.append("Ravenclaw")
+//     }
+//     else{
+//         houses.append("slytherin")
+//     }
+//   }
+//   console.log(houses)
 
   // The Double Trouble: you are tasked with writing a function that doubles each element in array.
      // However, there's catch: if the array contains consecutive duplicate elements, only double one 
@@ -56,8 +56,23 @@
             }
             return sum;
         }
-        console.log(sumUntilNagtive([1,2,3,45,-2 ,3,4,5]));
     }
+    console.log (sumUntilNagtive([1,2,3,4,-1,5,6])) //10
+
+    //The Vowel Counter: you need to create a function that should sum all numbers in an array
+    // until it encounters a negative number. Write a function that  performs this summation.
+
+    function countVowels(str){
+        let count =0;
+        const vowels = 'aeiouAEIOU';
+        for(const char of str){
+            if(vowels.includes(char)){
+                count++;
+            }
+        }
+        return count;
+    }
+    console.log(countVowels("Hello World")) //3
     </script>
 </body>
 </html>
