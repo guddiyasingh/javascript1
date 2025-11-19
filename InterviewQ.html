@@ -73,6 +73,17 @@
         return count;
     }
     console.log(countVowels("Hello World")) //3
+
+
+//   7.The local storage Manager: You are working on a note-taking app, and you to implement a 
+//     functiion named saveNoteToLocalStorage that takes a note object and saves it to the browser's
+//     local storage.
+
+    function saveNoteToLocalStorage(note){
+        let notes = JSON.parse(localStorage.getItem('notes')) || [];
+        notes.push(note);
+        localStorage.setItem('notes', JSON.stringify (notes));
+    }
     </script>
 </body>
 </html>
